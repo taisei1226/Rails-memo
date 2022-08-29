@@ -1,0 +1,27 @@
+<h3>投稿詳細</h3>
+ 
+ <table>
+   <tr>
+     <th>タイトル</th>
+     <td><pre><%= @reg.title %></pre></td>
+   </tr>
+   <tr>
+     <th>開始日</th>
+     <td><%= @reg.start_date%></td>
+   </tr>
+   <tr>
+     <th>終了日</th>
+     <td><%= @reg.finish_date%></td>
+   </tr>
+   <tr>
+     <th>投稿内容</th>
+     <td><%= @reg.content %></td>
+   </tr>
+ </table>
+ 
+ 
+ <div>
+   <ul>
+     <li><%= link_to "投稿一覧に戻る", :regs %></li>
+   </ul>
+ </div>
