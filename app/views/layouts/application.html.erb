@@ -6,16 +6,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
     <header>
-      <h1>Ruby on Rails</h1>
+      <h1>Ruby on Rails　スケジュール管理アプリ</h1>
     </header>
     <%= yield %>
     <footer>
-      <h1>Hello World!</h1>
+      <h1>　<%= Date.today%> </h1>
     </footer>
   </body>
 </html>

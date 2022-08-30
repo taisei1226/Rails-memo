@@ -10,21 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_26_100709) do
-  create_table "posts", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_08_29_115526) do
+
+  create_table "regs", force: :cascade do |t|
+    t.string "title"
     t.string "content"
-    t.integer "user_id"
+    t.integer "post_id"
+    t.date "start_date"
+    t.date "finish_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.integer "age"
-    t.string "introduction"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+
 
 end

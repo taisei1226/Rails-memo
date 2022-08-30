@@ -1,0 +1,35 @@
+<% if flash[:notice] %>
+   <p class="notice"><%= flash[:notice] %></p>
+ <% end %>
+ <h3>投稿一覧</h3>
+ <table>
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>タイトル</th>
+       <th>開始日</th>
+       <th>終了日</th>
+			 <th>更新日</th>
+       <th>参照</th>
+       <th>編集</th>
+       <th>削除</th>
+     </tr>
+   </thead>
+ 
+   <tbody>
+     <% @regs.each do |reg| %>
+       <tr>
+			 	 <td><%= reg.id %></td>
+         <td><%= reg.title %></td>
+         <td><%= reg.start_date%></td>
+				 <td><%= reg.finish_date %></td>
+				 <td><%= reg.updated_at.to_s(:datetime_jp) %></td>
+         <td><%= link_to "参照", reg %></td>
+         <td><%= link_to "編集", [:edit, reg] %></td>
+         <td><%= button_to "削除", reg, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+       </tr>
+     <% end %>
+   </tbody>
+ </table>
+
+ <p><%= link_to "新規投稿", :new_reg %></p>
